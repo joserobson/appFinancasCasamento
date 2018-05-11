@@ -1,0 +1,60 @@
+<ion-view view-title="" cache-view="false">
+	<ion-content id="content">
+
+	<div class="item text-center">
+		<strong>Controle do Dinheiro dia {{vm.hoje | date:'dd/MM/yyyy'}}</strong>
+	</div>		
+
+	<div class="list card">
+			<div class="item  item-button-right link">
+				<strong>Controle do Casal:</strong>
+			</div>
+			<div class="list">
+				<a class="item item-icon-left">
+					<i class="icon ion-person-stalker"></i> <strong> Valor Total: </strong> {{vm.controleCasal.pago + vm.controleCasal.pendente | currency }}					
+				</a>
+				<a class="item item-icon-left">
+					<i class="icon ion-person-stalker"></i> <strong> Valor Pago: </strong> {{vm.controleCasal.pago | currency}}					
+				</a>
+				<a class="item item-icon-left">
+					<i class="icon ion-person-stalker"></i> <strong> Valor Pendente: </strong> {{vm.controleCasal.pendente | currency}}				
+				</a>
+			</div>
+		</div>
+
+		<div class="list card">
+			<div class="item  item-button-right link">
+				<strong>Controle do Noivo:</strong>
+			</div>
+			<div class="list">
+				<a class="item item-icon-left">
+					<i class="icon ion-man"></i> <strong> Valor Total: </strong> {{vm.controleNoivo.pago + vm.controleNoivo.pendente | currency}}				
+				</a>
+				<a class="item item-icon-left">
+					<i class="icon ion-man"></i> <strong> Valor Pago: </strong> {{vm.controleNoivo.pago | currency}}			
+				</a>
+				<a class="item item-icon-left">
+					<i class="icon ion-man"></i> <strong> Valor Pendente: </strong> {{vm.controleNoivo.pendente | currency}}			
+				</a>
+			</div>
+		</div>
+
+		<div class="list card">
+			<div class="item  item-button-right link">
+				<strong>Controle da Noiva:</strong>
+			</div>
+			<div class="list">
+				<a class="item item-icon-left">
+					<i class="icon ion-woman"></i> <strong> Valor Total: </strong> {{vm.controleNoiva.pago + vm.controleNoiva.pendente | currency}}				
+				</a>
+				<a class="item item-icon-left">
+					<i class="icon ion-woman"></i> <strong> Valor Pago: </strong> {{vm.controleNoiva.pago | currency}}					
+				</a>
+				<a class="item item-icon-left">
+					<i class="icon ion-woman"></i> <strong> Valor Pendente: </strong> {{vm.controleNoiva.pendente | currency}}			
+				</a>
+			</div>
+		</div>
+
+	</ion-content>
+</ion-view>

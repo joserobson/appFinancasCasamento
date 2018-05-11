@@ -1,0 +1,47 @@
+<ion-view view-title="" cache-view="false">
+	<ion-content id="content">
+
+		<div class="list card">
+			<h4 class="border-top"><i class="icon ion-android-happy"></i> Meu Casamento</h4>
+			<div class="list">
+				<a class="item item-avatar">
+					<img src="img/icon_date.png">
+					<h2>Data</h2>
+					<p>{{casal.dataCasamento | date:'dd MMM yyyy HH:mm:ss'}}</p>
+				</a>
+				<a class="item item-avatar">
+					<img src="img/igreja.png">
+					<h2>Cerimônia</h2>
+					<p>{{casal.enderecoIgreja}}</p>
+				</a>
+				<a class="item item-avatar">
+					<img src="img/groom-icon.png">
+					<h2>Noivo</h2>
+					<p>{{casal.nomeNoivo}}</p>
+				</a>
+				
+				<a class="item item-avatar">
+					<img src="img/bride-icon.png">
+					<h2>Noiva</h2>
+					<p>{{casal.nomeNoiva}}</p>
+				</a>
+			</div>
+
+			<h4 class="border-top"><i class="icon ion-android-happy"></i> Acessar</h4>
+			<div class="list">
+				<a class="item item-avatar" ui-sref="app.listarDespesas">
+					<img src="img/cash_register.png">
+					<h2>Gerenciar Pagamentos</h2>
+					<p>Controle seus Pagamento aqui.</p>
+				</a>	
+
+				<a class="item item-avatar" ui-sref="app.planejamentoFinancas">
+					<img src="img/wallet.png">
+					<h2>Controle Finanças</h2>
+					<p>Controle seu dinheiro aqui..</p>
+				</a>			
+			</div>
+		</div>
+
+	</ion-content>
+</ion-view>

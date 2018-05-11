@@ -1,0 +1,14 @@
+{
+  "name": "app-meu-casamento",
+  "app_id": ""
+  ,
+  "gulpStartupTasks": [
+    "sass",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*",
+    "!www/**/*.map"
+  ]
+}

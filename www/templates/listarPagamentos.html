@@ -1,0 +1,33 @@
+<ion-view view-title="" cache-view="false">
+	<ion-content>
+		<div class="assertive">
+			<h4 class="text-center">{{vm.despesaSelecionada.descricao}} - {{vm.obterValorPorResponsavel() | currency}}</h4>
+		</div>
+		<h2 class="text-center" ng-show="vm.nenhumaPagamentoEncontrado">Despesa sem Pagamentos</h2>
+		<div class="list card" ng-repeat="object in vm.pagamentos">
+														
+			<div class="item">				
+				<div class="row">
+					<div class="col-40">
+						<h2 class="link">Valor:</h2> 						
+					</div>
+					<div class="col-60">
+						<strong>{{object.valor | currency}}</strong>
+					</div>						
+				</div>
+				
+				<div class="row">
+					<div class="col-40">
+						<h2 class="link">Pagar em:</h2> 						
+					</div>
+					<div class="col-60">
+						<strong>{{object.dataPagamento}}</strong>
+					</div>						
+				</div>		
+								
+				<span ng-class="{0:'badge badge-energized', 1:'badge badge-calm', '':'hidden'}[object.status]">{{vm.getStatus(object.status)}}</span>
+															
+			</div>					
+		</div>
+	</ion-content>	
+</ion-view>
